@@ -1,5 +1,6 @@
 var React = require('react');
 var createReactClass = require('create-react-class');
+var GroceryItem = require('./GroceryItem.jsx');
 
 module.exports = createReactClass({
     render: function(){
@@ -11,7 +12,7 @@ module.exports = createReactClass({
                         this.props.items.map(function(item, index){
                             return (
                                 <div>
-                                    {item.name}
+                                    <GroceryItem item={item} key={"item" + index}/>
                                 </div>
                             )
                         })
